@@ -6,10 +6,23 @@
 <body ng-app="App" class='container' ng-controller="AppCtrl">
   <h1>Bananagrams Cheater</h1>
   <p>Letters in your hand:</p>
-  <input id="letters" type="text" ng-change="onChange()" ng-model="letters" />
+  
+  <div>
+    <input id="letters" type="text" ng-change="onChange()" ng-model="letters" />
+  </div>
 
-  <div style="overflow-y: scroll; height: 500px; width: 300px; border: 1px solid #ddd; margin-top: 20px;">
-    <div ng-repeat="word in words">
+  <div style="overflow-y: scroll; height: 500px; width: 300px; border: 1px solid #ddd; margin-top: 20px; float: left;">
+    <div ng-repeat="word in bigWords">
+      <span ng-bind="word"></span>
+    </div>
+  </div>
+  <div style="overflow-y: scroll; height: 500px; width: 300px; border: 1px solid #ddd; margin-top: 20px; float: left;">
+    <div ng-repeat="word in mediumWords">
+      <span ng-bind="word"></span>
+    </div>
+  </div>
+  <div style="overflow-y: scroll; height: 500px; width: 300px; border: 1px solid #ddd; margin-top: 20px; float: left;">
+    <div ng-repeat="word in smallWords">
       <span ng-bind="word"></span>
     </div>
   </div>
