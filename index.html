@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Bananagrams Cheater</title>
+	<link rel="stylesheet" href="./bootstrap.min.css" />
+</head>
+<body ng-app="App" class='container' ng-controller="AppCtrl">
+	<h1>Bananagrams Cheater</h1>
+	<p>Letters in your hand:</p>
+	<input id="letters" type="text" ng-change="onChange()" ng-model="letters" />
+
+	<div style="overflow-y: scroll; height: 500px; width: 300px; border: 1px solid #ddd; margin-top: 20px;">
+		<div ng-repeat="word in words">
+			<span ng-bind="word"></span>
+		</div>
+	</div>
+
+	<script src="./angular.min.js"></script>
+	<script src="./underscore-min.js"></script>
+	<script src="./app-ctrl.js"></script>
+	<script src="./lexicon-service.js"></script>
+	<script src="./lexicon-words.js"></script>
+</body>
+</html>
