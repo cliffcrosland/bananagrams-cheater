@@ -1,10 +1,10 @@
 angular.module("App")
 .service("lexiconWords", function () {
-	return {
-		getLexiconWords: function () {
-			return _lexiconWords;
-		}
-	};
+  return {
+    getLexiconWords: function () {
+      return _lexiconWords;
+    }
+  };
 });
 var _lexiconWords = [ 
   'A',
